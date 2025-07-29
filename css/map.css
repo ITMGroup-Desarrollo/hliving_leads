@@ -1,0 +1,77 @@
+#map {
+  position: relative;
+  display: flex;
+  height: 200vh;
+  width: 100%;
+}
+.video-container {
+  position: absolute;
+  display: flex;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  width: 100%;
+  height: 40rem;
+  justify-content: center;
+}
+.video-container video {
+  width: 80%;
+  height: 70%;
+  object-fit: cover;
+}
+.background-70 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70%;
+  background-color: black;
+  z-index: 0;
+}
+.items-container{
+    position: relative;
+    display: flex;
+    align-items: end;
+    height: 100%;
+    width: 100%;
+    bottom: 2rem;
+}
+#map .text-container{
+    height: 40rem;
+    color: white;
+    width: 50%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#map .map-container{
+    width: 50%;
+    height: 35rem;
+}
+.map-container img{
+    height: 100%;
+}
+@media screen and (min-width: 768px) {
+  .video-container {
+    left: 50%;
+    transform: translate(-50%, -40%);
+    width: 100%;
+    height: 40rem;
+  }
+}
+@media screen and (min-width: 769px) and (min-height: 721px) {
+  .video-container {
+    left: 50%;
+    transform: translate(-50%, -40%);
+    width: 100%;
+    height: 60rem;
+  }
+  #map .text-container{
+    width: 50%;
+    height: 60rem;
+}
+#map .map-container{
+    width: 50%;
+    height: 60rem;
+}
+}
