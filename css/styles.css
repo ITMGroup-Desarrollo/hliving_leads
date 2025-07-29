@@ -4,6 +4,10 @@ body, html{
     font-family: 'raleway', sans-serif;
     overflow-x: hidden;
 }
+:root{
+  --primary-color: #3498db;
+  --secondary-color: #ef2782;
+}
 @font-face {
   font-family: 'raleway';
   src: url('/assets/fonts/Raleway-Medium.ttf') format('truetype');
