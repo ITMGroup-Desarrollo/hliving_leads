@@ -141,11 +141,17 @@
   animation: bounce 2s infinite;
 }
 .text-container button{
+  cursor: pointer;
   width: fit-content;
   background-color: white;
   border-radius: 1rem;
   margin-top: 2rem;
   font-size: 1rem;
+}
+.text-container button:hover {
+  background-color: black;
+  color: white;
+  border: 2px solid white;
 }
 @media screen and (min-width: 768px) {
   .video-container {
@@ -176,6 +182,10 @@
   }
 }
 @media screen and (min-width: 769px) and (min-height: 721px) {
+  .text-container button{
+  margin-top: 3rem;
+  font-size: 2rem;
+}
   .video-container {
     left: 50%;
     transform: translate(-50%, -40%);
