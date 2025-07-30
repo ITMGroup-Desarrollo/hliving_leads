@@ -82,7 +82,6 @@
 }
 .text-container > div:nth-of-type(2) p {
   font-size: 2rem;
-  color: var(--secondary-color);
   margin: 0;
 }
 .text-container > div:nth-of-type(2) p:nth-of-type(2) {
@@ -230,7 +229,6 @@
   }
   .text-container > div:nth-of-type(2) p {
     font-size: 4rem;
-    color: var(--secondary-color);
     margin: 0;
   }
   .text-container > div:nth-of-type(2) p:nth-of-type(2) {
