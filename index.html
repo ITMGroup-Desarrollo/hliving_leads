@@ -94,10 +94,7 @@
         </div>
         <div class="paragraph-container">
           <p class="paragraph">
-            H Living es un desarrollo exclusivo con entrega inmediata sobre Av.
-            huaracán, en la zona de mayor proyección de Cancún. Una oportunidad
-            única para vivir o invertir en un entorno moderno, accesible y con
-            alta plusvalía
+            H Living es un desarrollo exclusivo con entrega inmediata sobre Av. Huayacán, en la zona de mayor proyección de Cancún. Una oportunidad única para vivir o invertir en un entorno moderno, accesible y con alta plusvalía
           </p>
         </div>
       </div>
@@ -118,5 +115,48 @@
     <script>
       AOS.init();
     </script>
+    <script>
+  // Se ejecuta cuando el DOM está listo
+  document.addEventListener("DOMContentLoaded", () => {
+    const paragraph = document.querySelector(".paragraph");
+    const originalText = paragraph.textContent.trim();
+    const words = originalText.split(" ");
+    
+    // Vacía el párrafo y mete cada palabra en un span (aún sin animarla)
+    paragraph.innerHTML = "";
+    words.forEach((word, i) => {
+      const span = document.createElement("span");
+      span.textContent = word + " ";
+      span.style.animationDelay = `${i * 0.1}s`;
+      paragraph.appendChild(span);
+    });
+
+    // Crear observer
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // Añadir clase para activar la animación
+            paragraph.querySelectorAll("span").forEach(span => {
+              span.style.animationPlayState = "running";
+            });
+            observer.unobserve(entry.target); // Solo una vez
+          }
+        });
+      },
+      {
+        threshold: 0.3, // Cuando el 30% sea visible
+      }
+    );
+
+    // Pausar animación hasta que entre en vista
+    paragraph.querySelectorAll("span").forEach(span => {
+      span.style.animationPlayState = "paused";
+    });
+
+    observer.observe(paragraph);
+  });
+</script>
+
   </body>
 </html>

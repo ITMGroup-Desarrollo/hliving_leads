@@ -9,4 +9,15 @@ window.addEventListener("scroll", () => {
     header.style.opacity = 0;
   }
 });
-AOS.init();
+window.addEventListener("DOMContentLoaded", () => {
+  const paragraph = document.querySelector(".paragraph");
+  const words = paragraph.textContent.trim().split(" ");
+  paragraph.innerHTML = ""; 
+
+  words.forEach((word, i) => {
+    const span = document.createElement("span");
+    span.textContent = word + " ";
+    span.style.animationDelay = `${i * 0.05}s`; // 0.1s entre palabra y palabra
+    paragraph.appendChild(span);
+  });
+});
