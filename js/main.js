@@ -9,3 +9,4 @@ window.addEventListener("scroll", () => {
     header.style.opacity = 0;
   }
 });
+AOS.init();

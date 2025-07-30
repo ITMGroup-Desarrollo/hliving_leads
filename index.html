@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="/css/styles.css" />
     <link rel="stylesheet" href="/css/header.css" />
     <link rel="stylesheet" href="/css/map.css" />
@@ -30,10 +31,10 @@
       <div class="background-70">
         <div class="items-container">
           <div class="text-container">
-            <p>Vive en el corazón de</p>
-            <p>Cancún</p>
-            <div><span>desde</span><span>$3.2</span><span>MDP</span></div>
-            <div>
+            <p data-aos="fade-right">Vive en el corazón de</p>
+            <p data-aos="fade-right">Cancún</p>
+            <div data-aos="fade-right"><span>desde</span><span>$3.2</span><span>MDP</span></div>
+            <div data-aos="fade-right">
               <p>Tu nuevo hogar te espera en</p>
               <p>Av. Huayacán</p>
             </div>
@@ -46,17 +47,20 @@
                 alt="Mapa Cancún"
               />
               <img
+              data-aos="fade-up"
                 class="pin"
                 src="/assets/logos/pin-restaurante.png"
                 alt="pin restaurante"
               />
               <img
-              id="location-pin"
+              data-aos="fade-up"
+                id="location-pin"
                 class="pin"
                 src="/assets/logos/pin-location.svg"
                 alt="pin location"
               />
               <img
+              data-aos="fade-up"
                 class="pin"
                 src="/assets/logos/pin-auditorio.png"
                 alt="pin auditorio"
@@ -79,5 +83,11 @@
     </section>
 
     <script src="/js/main.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+
   </body>
 </html>
