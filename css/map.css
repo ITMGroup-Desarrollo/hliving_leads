@@ -223,11 +223,22 @@
   opacity: 0;
   transform: translateY(20px);
   display: inline-block;
+  white-space: pre;
   animation: fadeInUp 0.5s forwards;
+  animation-play-state: paused; /* Pausado por defecto */
 }
-.paragraph {
-  white-space: pre-wrap;
+
+.paragraph.animate span {
+  animation-play-state: running; /* Solo corre cuando tenga la clase animate */
 }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 @keyframes fadeInUp {
   to {

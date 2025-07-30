@@ -10,14 +10,41 @@ window.addEventListener("scroll", () => {
   }
 });
 window.addEventListener("DOMContentLoaded", () => {
-  const paragraph = document.querySelector(".paragraph");
-  const words = paragraph.textContent.trim().split(" ");
-  paragraph.innerHTML = ""; 
+    const paragraph = document.querySelector(".paragraph");
+    const words = paragraph.textContent.trim().split(" ");
+    paragraph.innerHTML = "";
 
-  words.forEach((word, i) => {
-    const span = document.createElement("span");
-    span.textContent = word + " ";
-    span.style.animationDelay = `${i * 0.05}s`; // 0.1s entre palabra y palabra
-    paragraph.appendChild(span);
+    // Crear los spans con animaciones pausadas
+    words.forEach((word, i) => {
+      const span = document.createElement("span");
+      span.textContent = word + " ";
+      span.style.animationDelay = `${i * 0.05}s`;
+      span.classList.add("word-span"); // Usamos esta clase para controlarlo luego
+      paragraph.appendChild(span);
+    });
+
+    // Pausar animación al inicio
+    const spans = paragraph.querySelectorAll(".word-span");
+    spans.forEach(span => {
+      span.style.animationPlayState = "paused";
+    });
+
+    // IntersectionObserver: activa animación cuando el párrafo entre en pantalla
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            spans.forEach(span => {
+              span.style.animationPlayState = "running";
+            });
+            observer.unobserve(paragraph); // Solo una vez
+          }
+        });
+      },
+      {
+        threshold: 0.4,
+      }
+    );
+
+    observer.observe(paragraph);
   });
-});
