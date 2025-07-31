@@ -253,8 +253,9 @@
 
 @media screen and (min-width: 769px) and (min-height: 721px) {
   .text-container button {
+    padding: 0 3rem;
     margin-top: 3rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .video-container {
     left: 50%;
@@ -327,7 +328,4 @@
     width: 80%;
     text-align: center;
   }
-  .paragraph-container {
-  margin: 3rem 0 5rem;
-}
 }

@@ -42,7 +42,7 @@
             <p>Tu nuevo hogar te espera en</p>
             <p>Av. Huayacán</p>
           </div>
-          <button data-aos="fade-right" data-aos-delay="500">
+          <button id="agendar-button" class="agendar-button" data-aos="fade-right" data-aos-delay="500">
             <p>Agenda tu cita virtual y accede a tu bono exclusivo</p>
           </button>
         </div>
@@ -77,6 +77,7 @@
     </div>
   </section>
   <section id="apartments">
+    <div class="background-50"></div>
     <div class="second-button-container">
       <h2>H Living</h2>
       <p>
@@ -91,33 +92,49 @@
         <li>Ubicación privilegiada</li>
         <li>Comunidad de baja densidad</li>
       </ul>
-      <button>
+      <button id="agendar-button2" class="agendar-button2">
         <p>Agenda tu cita virtual y accede a tu bono exclusivo</p>
       </button>
     </div>
     <div class="subtitle">
       <h3>¡Departamentos Disponibles!</h3>
-      </h2>
     </div>
     <div class="gallery2-container">
-  <div class="swiper-background"></div>
+      <div class="swiper-background"></div>
 
-  <!-- Botones afuera del .swiper -->
-  <img src="/assets/logos/arrow-left.png" alt="flecha izq" class="swiper-button-prev-custom">
-  <img src="/assets/logos/arrow-right.png" alt="flecha der" class="swiper-button-next-custom">
+      <!-- Botones afuera del .swiper -->
+      <img src="/assets/logos/arrow-left.png" alt="flecha izq" class="swiper-button-prev-custom">
+      <img src="/assets/logos/arrow-right.png" alt="flecha der" class="swiper-button-next-custom">
 
-  <div class="swiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="/assets/fotos/g1-1.webp" alt="foto-gallery2-1"><p>2 Recamaras</p></div>
-      <div class="swiper-slide"><img src="/assets/fotos/g2-2.webp" alt="foto-gallery2-1"><p>Techos amplios y ventilación&nbsp;cruzada</p></div>
-      <div class="swiper-slide"><img src="/assets/fotos/g2-3.webp" alt="foto-gallery2-1"><p>Ubicación privilegiada</p></div>
-      <div class="swiper-slide"><img src="/assets/fotos/g1-1.webp" alt="foto-gallery2-1"><p>2 Recamaras</p></div>
-      <div class="swiper-slide"><img src="/assets/fotos/g2-2.webp" alt="foto-gallery2-1"><p>Techos amplios y ventilación&nbsp;cruzada</p></div>
-      <div class="swiper-slide"><img src="/assets/fotos/g2-3.webp" alt="foto-gallery2-1"><p>Ubicación privilegiada</p></div>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="/assets/fotos/g1-1.webp" alt="foto-gallery2-1">
+            <p>2 Recamaras</p>
+          </div>
+          <div class="swiper-slide"><img src="/assets/fotos/g2-2.webp" alt="foto-gallery2-1">
+            <p>Techos amplios y ventilación&nbsp;cruzada</p>
+          </div>
+          <div class="swiper-slide"><img src="/assets/fotos/g2-3.webp" alt="foto-gallery2-1">
+            <p>Ubicación privilegiada</p>
+          </div>
+          <div class="swiper-slide"><img src="/assets/fotos/g1-1.webp" alt="foto-gallery2-1">
+            <p>2 Recamaras</p>
+          </div>
+          <div class="swiper-slide"><img src="/assets/fotos/g2-2.webp" alt="foto-gallery2-1">
+            <p>Techos amplios y ventilación&nbsp;cruzada</p>
+          </div>
+          <div class="swiper-slide"><img src="/assets/fotos/g2-3.webp" alt="foto-gallery2-1">
+            <p>Ubicación privilegiada</p>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-
+    <div class="agendar-container"><button id="agendar-button3" class="agendar-button3">
+        <p>Solicita brochure o disponibilidad</p>
+      </button></div>
+<div class="subtitle2">
+      <h3>¡Aprovecha los <b>últimos departamentos</b>!</h3>
+    </div>
   </section>
   <script src="/js/main.js"></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
@@ -125,17 +142,17 @@
     AOS.init();
   </script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
- <script>
-  const swiper = new Swiper('.swiper', {
-    loop: true,
-    slidesPerView: 3,
-    slidesPerGroup: 1,
-    navigation: {
-      nextEl: '.swiper-button-next-custom',
-      prevEl: '.swiper-button-prev-custom',
-    },
-  });
-</script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      slidesPerView: 3,
+      slidesPerGroup: 1,
+      navigation: {
+        nextEl: '.swiper-button-next-custom',
+        prevEl: '.swiper-button-prev-custom',
+      },
+    });
+  </script>
 </body>
 
 </html>
