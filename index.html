@@ -1,162 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/css/styles.css" />
-    <link rel="stylesheet" href="/css/header.css" />
-    <link rel="stylesheet" href="/css/map.css" />
-    <title>Document</title>
-  </head>
 
-  <body>
-    <header>
-      <img
-        src="/assets/fotos/header.webp"
-        alt="background"
-        class="background"
-      />
-      <div class="header-content">
-        <img
-          data-aos="fade-right"
-          data-aos-delay="500"
-          src="/assets/logos/hliving-white.png"
-          alt="logo-hliving"
-          class="logo"
-        />
-        <h1 data-aos="fade-right" data-aos-delay="500">
-          Haz realidad tu inversión ideal en Cancún
-        </h1>
-        <h2 data-aos="fade-right" data-aos-delay="500">
-          Vive donde todos quieren estar
-        </h2>
-      </div>
-    </header>
-    <section id="map">
-      <div class="background-70">
-        <div class="items-container">
-          <div class="text-container">
-            <p data-aos="fade-right" data-aos-delay="500">
-              Vive en el corazón de
-            </p>
-            <p data-aos="fade-right" data-aos-delay="500">Cancún</p>
-            <div data-aos="fade-right" data-aos-delay="500">
-              <span>desde</span><span>$3.2</span><span>MDP</span>
-            </div>
-            <div data-aos="fade-right" data-aos-delay="500">
-              <p>Tu nuevo hogar te espera en</p>
-              <p>Av. Huayacán</p>
-            </div>
-            <button data-aos="fade-right" data-aos-delay="500">
-              <p>Agenda tu cita virtual y accede a tu bono exclusivo</p>
-            </button>
-          </div>
-          <div class="map-container">
-            <div class="icons-container">
-              <img
-                class="map-image"
-                src="/assets/fotos/map.png"
-                alt="Mapa Cancún"
-              />
-              <img
-                data-aos="fade-up"
-                data-aos-delay="500"
-                class="pin"
-                src="/assets/logos/pin-restaurante.png"
-                alt="pin restaurante"
-              />
-              <img
-                data-aos="fade-up"
-                data-aos-delay="500"
-                id="location-pin"
-                class="pin"
-                src="/assets/logos/pin-location.svg"
-                alt="pin location"
-              />
-              <img
-                data-aos="fade-up"
-                data-aos-delay="500"
-                class="pin"
-                src="/assets/logos/pin-auditorio.png"
-                alt="pin auditorio"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="gallery1-container">
-        <div class="gallery">
-          <img src="/assets/fotos/g1-1.webp" alt="foto-gallery-1" />
-          <img src="/assets/fotos/g1-2.webp" alt="foto-gallery-2" />
-          <img src="/assets/fotos/g1-3.webp" alt="foto-gallery-3" />
-          <img src="/assets/fotos/g1-4.webp" alt="foto-gallery-4" />
-        </div>
-        <div class="paragraph-container">
-          <p class="paragraph">
-            H Living es un desarrollo exclusivo con entrega inmediata sobre Av. Huayacán, en la zona de mayor proyección de Cancún. Una oportunidad única para vivir o invertir en un entorno moderno, accesible y con alta plusvalía
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="/css/header.css" />
+  <link rel="stylesheet" href="/css/map.css" />
+  <link rel="stylesheet" href="/css/apartments.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+    <img src="/assets/fotos/header.webp" alt="background" class="background" />
+    <div class="header-content">
+      <img data-aos="fade-right" data-aos-delay="500" src="/assets/logos/hliving-white.png" alt="logo-hliving"
+        class="logo" />
+      <h1 data-aos="fade-right" data-aos-delay="500">
+        Haz realidad tu inversión ideal en Cancún
+      </h1>
+      <h2 data-aos="fade-right" data-aos-delay="500">
+        Vive donde todos quieren estar
+      </h2>
+    </div>
+  </header>
+  <section id="map">
+    <div class="background-70">
+      <div class="items-container">
+        <div class="text-container">
+          <p data-aos="fade-right" data-aos-delay="500">
+            Vive en el corazón de
           </p>
+          <p data-aos="fade-right" data-aos-delay="500">Cancún</p>
+          <div data-aos="fade-right" data-aos-delay="500">
+            <span>desde</span><span>$3.2</span><span>MDP</span>
+          </div>
+          <div data-aos="fade-right" data-aos-delay="500">
+            <p>Tu nuevo hogar te espera en</p>
+            <p>Av. Huayacán</p>
+          </div>
+          <button data-aos="fade-right" data-aos-delay="500">
+            <p>Agenda tu cita virtual y accede a tu bono exclusivo</p>
+          </button>
+        </div>
+        <div class="map-container">
+          <div class="icons-container">
+            <img class="map-image" src="/assets/fotos/map.png" alt="Mapa Cancún" />
+            <img data-aos="fade-up" data-aos-delay="500" class="pin" src="/assets/logos/pin-restaurante.png"
+              alt="pin restaurante" />
+            <img data-aos="fade-up" data-aos-delay="500" id="location-pin" class="pin"
+              src="/assets/logos/pin-location.svg" alt="pin location" />
+            <img data-aos="fade-up" data-aos-delay="500" class="pin" src="/assets/logos/pin-auditorio.png"
+              alt="pin auditorio" />
+          </div>
         </div>
       </div>
-      <div class="video-container">
-        <video
-          src="/assets/fotos/CM.mp4"
-          controls
-          autoplay
-          muted
-          loop
-          playsinline
-        ></video>
+    </div>
+    <div class="gallery1-container">
+      <div class="gallery">
+        <img src="/assets/fotos/g1-1.webp" alt="foto-gallery-1" />
+        <img src="/assets/fotos/g1-2.webp" alt="foto-gallery-2" />
+        <img src="/assets/fotos/g1-3.webp" alt="foto-gallery-3" />
+        <img src="/assets/fotos/g1-4.webp" alt="foto-gallery-4" />
       </div>
-    </section>
+      <div class="paragraph-container">
+        <p class="paragraph">
+          H Living es un desarrollo exclusivo con entrega inmediata sobre Av. Huayacán, en la zona de mayor proyección de Cancún. Una oportunidad única para vivir o invertir en un entorno moderno, accesible y con alta plusvalía
+        </p>
+      </div>
+    </div>
+    <div class="video-container">
+      <video src="/assets/fotos/CM.mp4" controls autoplay muted loop playsinline></video>
+    </div>
+  </section>
+  <section id="apartments">
+    <div class="second-button-container">
+      <h2>H Living</h2>
+      <p>
+        H living fusiona diseño contemporáneo con funcionalidad y acabados
+        regionales, ofreciendo espacios amplios, ventilación natural y
+        distribución inteligente. Ideal para vivir o generar ingresos por
+        renta.
+      </p>
+      <ul>
+        <li>Entrega inmediata</li>
+        <li>Certeza jurídica</li>
+        <li>Ubicación privilegiada</li>
+        <li>Comunidad de baja densidad</li>
+      </ul>
+      <button>
+        <p>Agenda tu cita virtual y accede a tu bono exclusivo</p>
+      </button>
+    </div>
+    <div class="subtitle">
+      <h3>¡Departamentos Disponibles!</h3>
+      </h2>
+    </div>
+    <div class="gallery2-container">
+  <div class="swiper-background"></div>
 
-    <script src="/js/main.js"></script>
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-    <script>
-  // Se ejecuta cuando el DOM está listo
-  document.addEventListener("DOMContentLoaded", () => {
-    const paragraph = document.querySelector(".paragraph");
-    const originalText = paragraph.textContent.trim();
-    const words = originalText.split(" ");
-    
-    // Vacía el párrafo y mete cada palabra en un span (aún sin animarla)
-    paragraph.innerHTML = "";
-    words.forEach((word, i) => {
-      const span = document.createElement("span");
-      span.textContent = word + " ";
-      span.style.animationDelay = `${i * 0.1}s`;
-      paragraph.appendChild(span);
-    });
+  <!-- Botones afuera del .swiper -->
+  <img src="/assets/logos/arrow-left.png" alt="flecha izq" class="swiper-button-prev-custom">
+  <img src="/assets/logos/arrow-right.png" alt="flecha der" class="swiper-button-next-custom">
 
-    // Crear observer
-    const observer = new IntersectionObserver(
-      (entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            // Añadir clase para activar la animación
-            paragraph.querySelectorAll("span").forEach(span => {
-              span.style.animationPlayState = "running";
-            });
-            observer.unobserve(entry.target); // Solo una vez
-          }
-        });
-      },
-      {
-        threshold: 0.3, // Cuando el 30% sea visible
-      }
-    );
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="/assets/fotos/g1-1.webp" alt="foto-gallery2-1"><p>2 Recamaras</p></div>
+      <div class="swiper-slide"><img src="/assets/fotos/g2-2.webp" alt="foto-gallery2-1"><p>Techos amplios y ventilación&nbsp;cruzada</p></div>
+      <div class="swiper-slide"><img src="/assets/fotos/g2-3.webp" alt="foto-gallery2-1"><p>Ubicación privilegiada</p></div>
+      <div class="swiper-slide"><img src="/assets/fotos/g1-1.webp" alt="foto-gallery2-1"><p>2 Recamaras</p></div>
+      <div class="swiper-slide"><img src="/assets/fotos/g2-2.webp" alt="foto-gallery2-1"><p>Techos amplios y ventilación&nbsp;cruzada</p></div>
+      <div class="swiper-slide"><img src="/assets/fotos/g2-3.webp" alt="foto-gallery2-1"><p>Ubicación privilegiada</p></div>
+    </div>
+  </div>
+</div>
 
-    // Pausar animación hasta que entre en vista
-    paragraph.querySelectorAll("span").forEach(span => {
-      span.style.animationPlayState = "paused";
-    });
-
-    observer.observe(paragraph);
+  </section>
+  <script src="/js/main.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+ <script>
+  const swiper = new Swiper('.swiper', {
+    loop: true,
+    slidesPerView: 3,
+    slidesPerGroup: 1,
+    navigation: {
+      nextEl: '.swiper-button-next-custom',
+      prevEl: '.swiper-button-prev-custom',
+    },
   });
 </script>
+</body>
 
-  </body>
 </html>

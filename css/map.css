@@ -145,6 +145,9 @@
 #location-pin {
   animation: bounce 2s infinite;
 }
+.swiper-button-prev-custom, .swiper-button-next-custom {
+  animation: bounce 2s infinite;
+}
 .text-container button {
   cursor: pointer;
   width: fit-content;
@@ -184,6 +187,7 @@
   display: flex;
   width: 100%;
   justify-content: center;
+  margin-bottom: 3rem;
 }
 .paragraph {
   font-size: 1.5rem;
@@ -323,4 +327,7 @@
     width: 80%;
     text-align: center;
   }
+  .paragraph-container {
+  margin: 3rem 0 5rem;
+}
 }

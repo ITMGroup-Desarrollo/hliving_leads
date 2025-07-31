@@ -20,3 +20,7 @@ body, html{
   font-weight: bolder;
   font-style: normal;
 }
+@media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 769px) and (min-height: 721px) {
+}

@@ -19,7 +19,7 @@ window.addEventListener("DOMContentLoaded", () => {
       const span = document.createElement("span");
       span.textContent = word + " ";
       span.style.animationDelay = `${i * 0.05}s`;
-      span.classList.add("word-span"); // Usamos esta clase para controlarlo luego
+      span.classList.add("word-span");
       paragraph.appendChild(span);
     });
 
@@ -29,7 +29,7 @@ window.addEventListener("DOMContentLoaded", () => {
       span.style.animationPlayState = "paused";
     });
 
-    // IntersectionObserver: activa animación cuando el párrafo entre en pantalla
+
     const observer = new IntersectionObserver(
       (entries, observer) => {
         entries.forEach(entry => {
