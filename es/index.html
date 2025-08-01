@@ -196,12 +196,17 @@
     });
     const swiper2 = new Swiper('.gallery2-container .swiper', {
       loop: true,
-      slidesPerView: 3,
+      slidesPerView: 1,
       slidesPerGroup: 1,
       navigation: {
         nextEl: '.swiper-button-next-custom',
         prevEl: '.swiper-button-prev-custom',
       },
+      breakpoints: {
+    768: {
+      slidesPerView: 3, 
+    }
+  }
     });
   </script>
 

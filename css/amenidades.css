@@ -11,7 +11,8 @@
     width: 8rem;
 }
 #plusvalia .item{
-    width: 33%;
+    padding: 2rem 0;
+    width: 90%;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -20,8 +21,9 @@
     font-size: 1rem;
 }
 #plusvalia .item p{
-    width: 70%;
+    width: 100%;
     align-self: center;
+    font-size: 1.5rem;
 }
 .moving-text{
     padding: 4rem 0;
@@ -30,6 +32,56 @@
     justify-content: center;
     flex-direction: column;
     gap: 2rem;
+}
+#amenidades .text-container{
+    align-self: center;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#text-left img{
+    width: 8rem;
+    height: auto;
+    padding-bottom: 0.4rem;
+}
+#text-left img:nth-of-type(2){
+    width: 7rem;
+    padding-bottom: 0;
+}
+#text-left img:nth-of-type(3){
+    width: 7rem;
+    padding-bottom: 1rem;
+}
+#text-right img{
+    height: 2rem;
+    width: auto;
+}
+#text-right img:nth-of-type(2){
+    height: 1.5rem;
+    padding-bottom: 0.4rem;
+}
+/* Reverso de slide-right (va hacia la izquierda) */
+.slide-out-left {
+  opacity: 0;
+  transform: translateX(-1000px);
+  transition: all 0.8s ease-out;
+}
+
+/* Reverso de slide-left (va hacia la derecha) */
+.slide-out-right {
+  opacity: 0;
+  transform: translateX(1000px);
+  transition: all 0.8s ease-out;
+}
+@media screen and (min-width: 768px) {
+    #plusvalia .item{
+        padding:0;
+    width: 33%;
+    font-size: 1rem;
+}
+    #plusvalia .item p{
+    width: 70%;
 }
 #amenidades .text-container{
     align-self: center;
@@ -59,21 +111,6 @@
     height: 3.8rem;
     padding-bottom: 1.1rem;
 }
-/* Reverso de slide-right (va hacia la izquierda) */
-.slide-out-left {
-  opacity: 0;
-  transform: translateX(-1000px);
-  transition: all 0.8s ease-out;
-}
-
-/* Reverso de slide-left (va hacia la derecha) */
-.slide-out-right {
-  opacity: 0;
-  transform: translateX(1000px);
-  transition: all 0.8s ease-out;
-}
-@media screen and (min-width: 768px) {
-
 }
 @media screen and (min-width: 769px) and (min-height: 721px) {
     #plusvalia{
