@@ -1,7 +1,7 @@
 #map {
   position: relative;
   display: flex;
-  height: 230vh;
+  height: 250vh;
   width: 100%;
   justify-content: center;
 }
