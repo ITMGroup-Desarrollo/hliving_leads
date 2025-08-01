@@ -63,7 +63,7 @@
 }
 
 .swiper-background {
-    height: 65%;
+    height: 55%;
     width: 100%;
     background-color: black;
     position: absolute;
@@ -153,6 +153,9 @@
 }
 
 @media screen and (min-width: 768px) {
+    .swiper-background {
+    height: 65%;
+}
     .swiper {
     width: 80%;
     margin: 0 auto;
