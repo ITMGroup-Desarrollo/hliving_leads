@@ -46,8 +46,8 @@
 }
 
 #apartments .subtitle h3 {
-    font-size: 3rem;
-    margin: 2rem;
+    font-size: 2.5rem;
+    margin: 1rem;
     text-align: center;
 }
 
@@ -94,6 +94,7 @@
 
 .swiper-slide img {
     height: 28rem;
+    width: 100%;
 }
 
 /* Flechas fuera del .swiper y más cerca de los bordes */
@@ -152,6 +153,12 @@
 }
 
 @media screen and (min-width: 768px) {
+    .swiper {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
     .swiper-slide p {
     font-size: 1.2rem;
     width: 80%;
