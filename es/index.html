@@ -72,6 +72,20 @@
         <img src="/assets/fotos/g1-3.webp" alt="foto-gallery-3" />
         <img src="/assets/fotos/g1-4.webp" alt="foto-gallery-4" />
       </div>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="/assets/fotos/g1-1.webp" alt="foto-gallery2-1">
+          </div>
+          <div class="swiper-slide"><img src="/assets/fotos/g1-2.webp" alt="foto-gallery2-1">
+          </div>
+          <div class="swiper-slide"><img src="/assets/fotos/g1-3.webp" alt="foto-gallery2-1">
+          </div>
+          <div class="swiper-slide"><img src="/assets/fotos/g1-4.webp" alt="foto-gallery2-1">
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+
+      </div>
       <div class="paragraph-container">
         <p class="paragraph">
           H Living es un desarrollo exclusivo con entrega inmediata sobre Av. Huayacán, en la zona de mayor proyección de Cancún. Una oportunidad única para vivir o invertir en un entorno moderno, accesible y con alta plusvalía.
@@ -167,7 +181,20 @@
   </script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
-    const swiper = new Swiper('.swiper', {
+    const swiper = new Swiper('.gallery1-container .swiper', {
+      loop: true,
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+      navigation: {
+        nextEl: '.swiper-button-next-custom',
+        prevEl: '.swiper-button-prev-custom',
+      },
+    });
+    const swiper2 = new Swiper('.gallery2-container .swiper', {
       loop: true,
       slidesPerView: 3,
       slidesPerGroup: 1,
