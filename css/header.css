@@ -2,7 +2,7 @@
 header {
   position: relative;
   width: 100%;
-  height: 200vh;
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -65,9 +65,18 @@ h2 {
   padding: 10px 5px;
 }
 @media screen and (min-width: 768px) {
+  header {
+  height: 200vh;
+}
 .header-content{
   padding-top: 4rem;
   }
+  .lang-container img {
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  padding: 10px 5px;
+}
 }
 @media screen and (min-width: 769px) and (min-height: 721px) {
 .header-content {
@@ -85,5 +94,11 @@ h2 {
   /* padding-left: 3rem; */
   width: 14rem;
   margin-bottom: 1.5rem;
+}
+.lang-container img {
+  z-index: 10;
+  width: 50px;
+  height: 50px;
+  padding: 10px 5px;
 }
 }
