@@ -91,13 +91,9 @@
         </div>
       </div>
     </div>
-    <div class="gallery1-container">
-      <div class="gallery">
-        <img src="/assets/fotos/g1-1.webp" alt="foto-gallery-1" />
-        <img src="/assets/fotos/g1-2.webp" alt="foto-gallery-2" />
-        <img src="/assets/fotos/g1-3.webp" alt="foto-gallery-3" />
-        <img src="/assets/fotos/g1-4.webp" alt="foto-gallery-4" />
-      </div>
+    <div class="gallery1-container" style="position: relative;">
+      <img src="/assets/logos/arrow-left.png" alt="flecha izq" class="swiper-button-prev-custom">
+      <img src="/assets/logos/arrow-right.png" alt="flecha der" class="swiper-button-next-custom">
       <div class="swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide"><img src="/assets/fotos/g1-1.webp" alt="foto-gallery2-1">
@@ -226,6 +222,15 @@
         nextEl: '.swiper-button-next-custom',
         prevEl: '.swiper-button-prev-custom',
       },
+      
+      breakpoints: {
+    768: {
+      slidesPerView: 3, 
+      spaceBetween: 30,
+      pagination: {
+    el: '',
+    clickable: true,
+    }}}
     });
     const swiper2 = new Swiper('.gallery2-container .swiper', {
       loop: true,
@@ -238,6 +243,8 @@
       breakpoints: {
     768: {
       slidesPerView: 3, 
+      spaceBetween: 30,
+      
     }
   }
     });

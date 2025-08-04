@@ -167,8 +167,8 @@
     width: 80%;
 }
     /* Flechas fuera del .swiper y más cerca de los bordes */
-.swiper-button-prev-custom,
-.swiper-button-next-custom {
+.gallery2-container .swiper-button-prev-custom,
+.gallery2-container .swiper-button-next-custom {
     position: absolute;
     top: 45%;
     transform: translateY(-50%);
