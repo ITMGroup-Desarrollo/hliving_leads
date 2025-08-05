@@ -20,7 +20,6 @@ agendarBtn2.addEventListener("click", () => {
   showStep(1);
 });
 agendarBtn3.addEventListener("click", () => {
-  brochureRequested = true;
   modal.classList.remove("hidden");
   showStep(1);
 });
