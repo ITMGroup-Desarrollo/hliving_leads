@@ -35,6 +35,7 @@ function showStep(num) {
 }
 
 // Paso 1: Envío a HubSpot
+// Paso 1: Envío a HubSpot
 document.getElementById("Registro-Aldea-Umm").addEventListener("submit", (e) => {
   e.preventDefault();
   const form = e.target;
@@ -56,25 +57,34 @@ document.getElementById("Registro-Aldea-Umm").addEventListener("submit", (e) => 
   };
 
   fetch(
-    "https://api.hsforms.com/submissions/v3/integration/submit/39595277/204dfa24-d904-4215-97bb-bff75709aeb9",
+    "https://api.hsforms.com/submissions/v3/integration/submit/39595277/0ce54b14-a5a4-4b50-8ac5-ddb66e271a93",
     {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
     }
-  ).then((res) => {
+  )
+  .then((res) => {
+    console.log("Respuesta de HubSpot:", res.status);
     if (res.ok) {
-      fbq("track", "Lead", {
-        content_name: "Registro H Living",
-        form_location: "Landing Promocional",
-      });
+      
       document.getElementById(
         "surveyIntro"
-      ).textContent = `${formData.firstname} ¡Nos gustaria conocerte mejor! Te agradeceríamos si pudieras responder esta breve encuesta.`;
+      ).textContent = `${formData.firstname} ¡Nos gustaría conocerte mejor! Te agradeceríamos si pudieras responder esta breve encuesta.`;
       showStep(2);
+    } else {
+      console.error("Error al enviar a HubSpot:", res.statusText);
     }
+  })
+  .catch((error) => {
+    console.error("Error en la solicitud:", error);
   });
 });
+    // fbq("track", "Lead", {
+    //   content_name: "Registro H Living",
+    //   form_location: "Landing Promocional",
+    // });
+
 
 // Paso 2 a 3 — ahora solo muestra la pregunta
 document.getElementById("toStep3").addEventListener("click", () => {
