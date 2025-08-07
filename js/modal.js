@@ -162,7 +162,7 @@ function insertCalendar() {
   calendarDiv.className = "meetings-iframe-container";
   calendarDiv.setAttribute(
     "data-src",
-    `https://meetings.hubspot.com/octavio23?embed=true&${queryParams}`
+    `https://meetings.hubspot.com/octavio23/calendario-h-living?embed=true&${queryParams}`
   );
   container.appendChild(calendarDiv);
 

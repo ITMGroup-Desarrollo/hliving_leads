@@ -5,7 +5,7 @@ body, html{
     overflow-x: hidden;
 }
 :root{
-  --primary-color: #3498db;
+  --primary-color: #000000;
   --secondary-color: #ef2782;
 }
 @font-face {
