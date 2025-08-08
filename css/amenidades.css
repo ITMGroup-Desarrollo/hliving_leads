@@ -74,7 +74,72 @@
   transform: translateX(1000px);
   transition: all 0.8s ease-out;
 }
+#amenidades{
+    text-align: center;
+}
+#amenidades h3{
+    font-size: 3.5rem;
+    font-weight: 900;
+}
+#amenidades p{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-self: center;
+    position: relative;
+    font-size: 3rem;
+    padding-bottom: 3rem;
+}
+#amenidades span:nth-of-type(1){
+    bottom: 45%;
+    right: 62%;
+    
+}
+#amenidades span:nth-of-type(2){
+    font-size: 4rem;
+    font-weight: 900;
+    bottom: 30%;
+    right: 45%;
+    
+}
+#amenidades span:nth-of-type(3){
+    bottom: 0;
+    right: 10%;
+}
 @media screen and (min-width: 768px) {
+    #amenidades h3{
+    font-size: 4.5rem;
+    font-weight: 900;
+}
+    #amenidades span:nth-of-type(1){
+    position: absolute;
+    bottom: 45%;
+    right: 62%;
+    
+}
+#amenidades span:nth-of-type(2){
+    position: absolute;
+    font-size: 4rem;
+    font-weight: 900;
+    bottom: 30%;
+    right: 45%;
+    
+}
+#amenidades span:nth-of-type(3){
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+}
+    #amenidades p{
+    width: 100%;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    position: relative;
+    padding: 3rem;
+    font-size: 3rem;
+    padding-bottom: 3rem;
+}
     #plusvalia .item{
         padding:0;
     width: 33%;
@@ -113,6 +178,16 @@
 }
 }
 @media screen and (min-width: 769px) and (min-height: 721px) {
+    #amenidades p{
+    width: 60%;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    position: relative;
+    padding: 3rem;
+    font-size: 3rem;
+    padding-bottom: 3rem;
+}
     #plusvalia{
     background-color: rgba(51,51,51,1);
 }
