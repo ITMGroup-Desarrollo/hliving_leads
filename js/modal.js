@@ -80,10 +80,10 @@ document.getElementById("Registro-Aldea-Umm").addEventListener("submit", (e) => 
     console.error("Error en la solicitud:", error);
   });
 });
-    // fbq("track", "Lead", {
-    //   content_name: "Registro H Living",
-    //   form_location: "Landing Promocional",
-    // });
+    fbq("track", "Lead", {
+      content_name: "Registro H Living",
+      form_location: "Landing Promocional",
+    });
 
 
 // Paso 2 a 3 — ahora solo muestra la pregunta
