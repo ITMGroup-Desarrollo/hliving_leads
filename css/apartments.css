@@ -145,7 +145,7 @@
     left: 0;
     width: 100%;
     height: 40%;
-    background-image: url('assets/fotos/central.webp');
+    background-image: url('../assets/fotos/central.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
