@@ -189,18 +189,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <div id="formModal" class="modal hidden">
     <div class="modal-content">
       <span class="close">&times;</span>
-
+  
       <!-- Paso 1: Formulario -->
       <div class="step step-1">
-        <h2>Book your virtual appointment</h2>
+        <h2>AGENDA UNA CITA</h2>
         <form id="Registro-Aldea-Umm">
-          <!-- Registro-Aldea-Umm -->
           <div class="form-row">
-            <input type="text" name="firstname" placeholder="Name" required>
-            <input type="text" name="lastname" placeholder="Lastname" required>
+            <input type="text" name="firstname" placeholder="Nombre" required>
+            <input type="text" name="lastname" placeholder="Apellido" required>
           </div>
           <div class="form-row">
-            <div class="country-code" style="display: flex; gap: 0.5rem; ">
+            <div class="country-code" style="display: flex; gap: 0.5rem;">
               <select id="countryCode" name="countryCode" required>
                 <option value="+1">US +1</option>
                 <option value="+52">MX +52</option>
@@ -211,80 +210,68 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </select>
               <input type="tel" name="phone" placeholder="1234567890" required>
             </div>
-            <input type="email" name="email" placeholder="Email" required>
+            <input type="email" name="email" placeholder="Correo Electronico" required>
           </div>
-          <button type="submit">Next</button>
+          <button type="submit">Siguiente</button>
         </form>
       </div>
-
+  
       <!-- Paso 2: Encuesta intro -->
       <div class="step step-2 hidden">
         <h2 id="surveyIntro"></h2>
-        <button id="toStep3">Next</button>
+        <button id="toStep3">Siguiente</button>
       </div>
-
-      <!-- Paso 3: Pregunta de motivo -->
+  
+      <!-- Paso 3: Pregunta de contacto -->
       <div class="step step-3 hidden">
         <h2 id="motivoQuestion"></h2>
         <div class="answers-container">
-          <label><input type="radio" name="motivo" value="Vivirlo y disfrutarlo (uso propio)">Live it and enjoy it (own
-          use)</label>
-        <label><input type="radio" name="motivo" value="Invertir y generar plusvalía o rentas (inversión)">Invertir y generar plusvalía o rentas (inversión)</label>
-        <label><input type="radio" name="motivo"
-            value="Soy asesor o broker (buscando opciones para mis clientes)">I am an
-          advisor or broker (looking for options for my clients)</label>
+          <label><input type="radio" name="motivo" value="Vivirlo y disfrutarlo (uso propio)">Vivirlo y disfrutarlo (uso
+            propio)</label>
+          <label><input type="radio" name="motivo" value="Invertir y generar plusvalía o rentas (inversión)">Invertir y
+            generar plusvalía o rentas (inversión)</label>
+          <label><input type="radio" name="motivo" value="Soy asesor o broker (buscando opciones para mis clientes)">Soy
+            asesor o broker (buscando opciones para mis clientes)</label>
         </div>
         <div class="forms-button-container">
-          <button class="back-button" data-back-step="2">Back</button>
-          <button id="toStep4">Next</button>
+          <button class="back-button" data-back-step="2">Atrás</button>
+          <button id="toStep4">Siguiente</button>
         </div>
       </div>
+  
       <!-- Paso 4: Pregunta de inversión -->
       <div class="step step-4 hidden">
-        <h2>How soon would you like to invest in your new apartment?</h2>
+        <h2>¿Qué tan pronto te gustaría invertir en tu nuevo lote residencial?</h2>
         <div class="answers-container">
-          <label><input type="radio" name="invertir" value="De inmediato">immediately</label>
-        <label><input type="radio" name="invertir" value="En los próximos meses">In the coming months</label>
-        <label><input type="radio" name="invertir" value="A largo plazo">Long term</label>
+          <label><input type="radio" name="invertir" value="De inmediato">De inmediato</label>
+          <label><input type="radio" name="invertir" value="En los próximos meses">En los próximos meses</label>
+          <label><input type="radio" name="invertir" value="A largo plazo">A largo plazo</label>
         </div>
         <div class="forms-button-container">
-          <button class="back-button" data-back-step="3">Back</button>
-          <button id="toStep5">Next</button>
+          <button class="back-button" data-back-step="3">Atrás</button>
+          <button id="toStep5">Siguiente</button>
         </div>
       </div>
-
+  
       <!-- Paso 5: Pregunta de precio -->
       <div class="step step-5 hidden">
-        <h2>Are you aware that our residential lots start at $1,100,000 MXN?</h2>
+        <h2>¿Estás consciente de que nuestros lotes residenciales comienzan en $1,100,000 MXN?</h2>
         <div class="answers-container">
-          <label><input type="radio" name="precio" value="si">Yes</label>
-        <label><input type="radio" name="precio" value="No">No</label>
+          <label><input type="radio" name="precio" value="Si">Sí</label>
+          <label><input type="radio" name="precio" value="No">No</label>
         </div>
         <div class="forms-button-container">
-          <button class="back-button" data-back-step="4">Back</button>
-          <button id="toStep6">Next</button>
+          <button class="back-button" data-back-step="4">Atrás</button>
+          <button id="toStep6">Siguiente</button> <!-- Ahora va directo al calendario -->
         </div>
       </div>
-
-      <!-- Paso 6: Pregunta de  contacto -->
+  
+      <!-- Paso 6: Calendario -->
       <div class="step step-6 hidden">
-        <h2 id="contactoQuestion"></h2>
-        <div class="answers-container">
-          <label><input type="radio" name="contacto" value="Videollamada por Zoom">Zoom video call</label>
-        <label><input type="radio" name="contacto" value="Llamada telefónica">Phone call</label>
-        </div>
-        <div class="forms-button-container">
-          <button class="back-button" data-back-step="5">Back</button>
-          <button id="toStep7">Next</button>
-        </div>
-      </div>
-
-      <!-- Paso 7: Calendario -->
-      <div class="step step-7 hidden">
-        <h2>Select your appointment</h2>
+        <h2>Selecciona tu cita</h2>
         <div id="calendarContainer"></div>
       </div>
-
+  
     </div>
   </div>
   <section id="apartments">
