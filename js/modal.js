@@ -107,47 +107,36 @@ document.getElementById("toStep5").addEventListener("click", () => {
   const answer = document.querySelector('input[name="invertir"]:checked');
   if (!answer) return alert("Selecciona una opción.");
   invertirAnswer = answer.value;
-  document.getElementById(
-    "contactoQuestion"
-  ).innerHTML = `${formData.firstname} ¿Cómo prefieres agendar tu cita virtual?`;
   showStep(5);
 });
 
-// Paso 5 a 6 — guarda precio
-document.getElementById("toStep6").addEventListener("click", () => {
-  const answer = document.querySelector('input[name="precio"]:checked');
-  if (!answer) return alert("Selecciona una opción.");
-  precioAnswer = answer.value;
-  showStep(6);
-});
+// Paso 5 a Calendario — guarda precio y ejecuta acciones finales
+  document.getElementById("toStep6").addEventListener("click", () => {
+    const answer = document.querySelector('input[name="precio"]:checked');
+    if (!answer) return alert("Selecciona una opción.");
+    precioAnswer = answer.value;
 
-// Paso 6 a 7 — guarda contacto y muestra calendario
-document.getElementById("toStep7").addEventListener("click", () => {
-  const answer = document.querySelector('input[name="contacto"]:checked');
-  if (!answer) return alert("Selecciona una opción.");
-  contactoAnswer = answer.value;
+    // Enviar correo
+    sendConfirmationEmail();
 
-  // Enviar correo
-  sendConfirmationEmail();
+    // Si viene del botón de brochure, descarga el PDF
+    if (brochureRequested) {
+      const link = document.createElement("a");
+      link.href = "../assets/brochure-en.pdf";
+      link.download = "Aldea-Umm-Brochure.pdf";
 
-  // Si viene del botón de brochure, descarga el PDF
-  if (brochureRequested) {
-    const link = document.createElement("a");
-    link.href = "../assets/brochure-en.pdf";
-    link.download = "Aldea-Umm-Brochure.pdf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
 
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  }
+    // Mostrar calendario (ahora step-6)
+    showStep(6);
+    insertCalendar();
 
-  // Mostrar calendario
-  showStep(7);
-  insertCalendar();
-
-  // Reset flag para futuros agendamientos
-  brochureRequested = false;
-});
+    // Reset flag para futuros agendamientos
+    brochureRequested = false;
+  });
 document.querySelectorAll(".back-button").forEach((button) => {
   button.addEventListener("click", (e) => {
     const backStep = e.target.getAttribute("data-back-step");
@@ -208,7 +197,6 @@ function sendConfirmationEmail() {
         invertirAnswer,
       "¿Estás consciente de que nuestros lotes residenciales comienzan en $1,100,000 MXN?":
         precioAnswer,
-      "¿Cómo prefieres agendar tu cita virtual?": contactoAnswer,
       _template: "table",
     }),
   })
