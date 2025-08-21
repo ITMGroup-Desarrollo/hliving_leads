@@ -112,7 +112,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=1653532375326705&ev=PageView&noscript=1" /></noscript>
   <header>
-    <img src="assets/fotos/header.webp" alt="background" class="background" />
+    <img src="assets/fotos/header.jpg" alt="background" class="background" />
     <div class="header-content">
       <img data-aos="fade-right" data-aos-delay="500" src="assets/logos/hliving-white.png" alt="logo-hliving"
         class="logo" />
@@ -161,13 +161,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <img src="assets/logos/arrow-right.png" alt="flecha der" class="swiper-button-next-custom">
       <div class="swiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="assets/fotos/g1-1.webp" alt="foto-gallery2-1">
+          <div class="swiper-slide"><img src="assets/fotos/g1-1.webp" alt="foto-gallery1-1">
           </div>
-          <div class="swiper-slide"><img src="assets/fotos/g1-2.webp" alt="foto-gallery2-1">
+          <div class="swiper-slide"><img src="assets/fotos/g1-2.webp" alt="foto-gallery1-2">
           </div>
-          <div class="swiper-slide"><img src="assets/fotos/g1-3.webp" alt="foto-gallery2-1">
+          <div class="swiper-slide"><img src="assets/fotos/g1-3.webp" alt="foto-gallery1-3">
           </div>
-          <div class="swiper-slide"><img src="assets/fotos/g1-4.webp" alt="foto-gallery2-1">
+          <div class="swiper-slide"><img src="assets/fotos/g1-4.webp" alt="foto-gallery1-4">
+          </div>
+          <div class="swiper-slide"><img src="assets/fotos/g1-5.webp" alt="foto-gallery1-5">
           </div>
         </div>
         <div class="swiper-pagination"></div>
@@ -342,7 +344,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </section>
   <section id="amenidades">
     <h3>Ubicación privilegiada</h3>
-    <p><span>A menos de </span><span>150 M</span><span>de todo lo que necesitas</span></p>
+    <img src="assets/fotos/texto.png" alt="">
     <!-- <div class="moving-text">
       <div id="text-left" class="text-container" data-aos="slide-right" data-aos-delay="500" data-aos-duration="1000">
         <img src="assets/logos/text-1.svg" alt="texto 1">
@@ -364,6 +366,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </a-assets>
     
       <a-entity camera look-controls position="0 1.6 0"></a-entity>
+      <a-image 
+        src="assets/pin.png" 
+        position="0.35 1 -0.19" 
+        scale="0.3 0.5 0.3"
+        rotation=" 0 -40 0"
+        look-at="[camera]">
+        
+      </a-image>
+
       <a-sky src="#sky" rotation="0 -130 0"></a-sky>
     </a-scene>
     
