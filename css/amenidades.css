@@ -1,0 +1,104 @@
+#plusvalia{
+    background-color: rgba(51,51,51,1);
+}
+#plusvalia .items-container{
+    display: flex;
+    padding: 2rem 0;
+    width: 100%;
+}
+#plusvalia .items-container img{
+    align-self: center;
+    width: 8rem;
+}
+#plusvalia .item{
+    padding: 2rem 0;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    font-size: 1rem;
+}
+#plusvalia .item p{
+    width: 100%;
+    align-self: center;
+    font-size: 1.5rem;
+}
+#amenidades{
+    padding: 3rem 0;
+    align-self: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+#amenidades img{
+    align-self: center;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Reverso de slide-right (va hacia la izquierda) */
+.slide-out-left {
+  opacity: 0;
+  transform: translateX(-1000px);
+  transition: all 0.8s ease-out;
+}
+
+/* Reverso de slide-left (va hacia la derecha) */
+.slide-out-right {
+  opacity: 0;
+  transform: translateX(1000px);
+  transition: all 0.8s ease-out;
+}
+#amenidades{
+    text-align: center;
+}
+#amenidades h3{
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin: 0;
+}
+@media screen and (min-width: 768px) {
+    #amenidades h3{
+    font-size: 4.5rem;
+    font-weight: 900;
+}
+    #plusvalia .item{
+        padding:0;
+    width: 33%;
+    font-size: 1rem;
+}
+    #plusvalia .item p{
+    width: 70%;
+}
+
+}
+@media screen and (min-width: 769px) and (min-height: 721px) {
+
+    #plusvalia{
+    background-color: rgba(51,51,51,1);
+}
+#plusvalia .items-container{
+    padding: 4rem 0;
+}
+#plusvalia .items-container img{
+    width: 10rem;
+}
+#plusvalia .item{
+    font-size: 1.5rem;
+}
+#plusvalia .item p{
+    width: 80%;
+}
+.moving-text{
+    padding: 4rem 0;
+    gap: 4rem;
+}
+
+}

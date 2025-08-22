@@ -1,0 +1,306 @@
+#apartments {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-top: 24rem;
+}
+
+.second-button-container {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 90%;
+    padding: 3rem 2rem;
+}
+
+.second-button-container h2 {
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+.second-button-container>p {
+    text-align: justify;
+    font-size: 1rem;
+    color: white;
+}
+
+.second-button-container ul {
+    font-size: 1.2rem;
+    color: white;
+    padding-bottom: 1rem;
+}
+
+.second-button-container button {
+    cursor: pointer;
+    border-radius: 1rem;
+    font-size: 1rem;
+    background-color: white;
+
+}
+
+.second-button-container button:hover {
+    border: 2px solid white;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+#apartments .subtitle h3 {
+    font-size: 2.5rem;
+    margin: 1rem;
+    text-align: center;
+}
+
+#apartments .subtitle2 h3 {
+    font-size: 2.5rem;
+    margin: 2rem;
+    text-align: center;
+}
+
+.gallery2-container {
+    position: relative;
+    display: flex;
+}
+
+.swiper-background {
+    height: 55%;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    align-self: center;
+}
+
+.swiper {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.swiper-slide {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+.swiper-slide p {
+    font-size: 1.5rem;
+    width: 80%;
+}
+
+.swiper-slide img {
+    height: 28rem;
+    width: 100%;
+}
+
+/* Flechas fuera del .swiper y más cerca de los bordes */
+.swiper-button-prev-custom,
+.swiper-button-next-custom {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    height: 3.5rem;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.swiper-button-prev-custom {
+    left: 0.5rem;
+    /* separadas del borde izquierdo */
+}
+
+.swiper-button-next-custom {
+    right: 0.5rem;
+    /* separadas del borde derecho */
+}
+
+.agendar-container {
+    display: flex;
+    justify-content: center;
+}
+
+#agendar-button3 {
+    margin: 1rem 0;
+    padding: 0 2rem;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    color: white;
+    background-color: black;
+}
+
+#agendar-button3:hover {
+    cursor: pointer;
+    border: 2px solid black;
+    color: black;
+    background-color: white;
+}
+
+.background-50 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background-image: url('../assets/fotos/central.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+@media screen and (min-width: 768px) {
+    .swiper-background {
+    height: 65%;
+}
+    .swiper {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+    .swiper-slide p {
+    font-size: 1.2rem;
+    width: 80%;
+}
+    /* Flechas fuera del .swiper y más cerca de los bordes */
+.gallery2-container .swiper-button-prev-custom,
+.gallery2-container .swiper-button-next-custom {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    height: 5rem;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.swiper-button-prev-custom {
+    left: 2rem;
+    /* separadas del borde izquierdo */
+}
+
+.swiper-button-next-custom {
+    right: 2rem;
+    /* separadas del borde derecho */
+}
+    .second-button-container {
+        align-self: start;
+        margin-left: 5rem;
+        width: 40%;
+        padding: 3rem;
+    }
+
+    .second-button-container h2 {
+        font-size: 4rem;
+        font-weight: 900;
+    }
+
+    .second-button-container>p {
+        font-size: 1rem;
+    }
+
+    .second-button-container ul {
+        font-size: 1.2rem;
+        padding-bottom: 1rem;
+    }
+
+    .second-button-container button {
+        border-radius: 1rem;
+        font-size: 1.2rem;
+
+    }
+
+
+    #apartments .subtitle h3 {
+        font-size: 3rem;
+        margin: 2rem;
+    }
+
+    #apartments .subtitle2 h3 {
+        font-size: 2.5rem;
+        margin: 2rem;
+    }
+}
+
+@media screen and (min-width: 769px) and (min-height: 721px) {
+    #apartments {
+        position: relative;
+        padding-top: 36rem;
+    }
+
+    #apartments .subtitle h3 {
+        font-size: 5rem;
+        margin: 5rem 0 2rem;
+    }
+
+    #apartments .subtitle2 h3 {
+        font-weight: 100;
+        font-size: 3.5rem;
+        margin: 3rem 0;
+    }
+
+    #apartments .subtitle2 h3 b {
+        font-weight: 900;
+    }
+
+    .swiper-slide img {
+        height: 40rem;
+    }
+
+    .swiper-background {
+        height: 60%;
+    }
+
+    .swiper-slide {
+        margin-top: 8rem;
+    }
+
+    .swiper-button-prev-custom,
+    .swiper-button-next-custom {
+        height: 7rem;
+    }
+
+    .swiper-button-prev-custom {
+        left: 3rem;
+    }
+
+    .swiper-button-next-custom {
+        right: 3rem;
+    }
+
+    .second-button-container h2 {
+        font-size: 6rem;
+    }
+
+    .second-button-container>p {
+        text-align: justify;
+        font-size: 1.5rem;
+        color: white;
+    }
+
+    .second-button-container ul {
+        font-size: 2rem;
+        color: white;
+        padding-bottom: 1rem;
+    }
+
+    .second-button-container button {
+        border-radius: 1rem;
+        font-size: 1.5rem;
+
+    }
+
+    .swiper-slide p {
+        font-size: 2rem;
+    }
+
+    #agendar-button3 {
+        margin: 0.5rem 0;
+        font-size: 1.5rem;
+        color: white;
+        background-color: black;
+    }
+}

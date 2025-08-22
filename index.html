@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/map.css" />
+  <link rel="stylesheet" href="css/apartments.css" />
+  <link rel="stylesheet" href="css/amenidades.css" />
+  <link rel="stylesheet" href="css/image-360.css" />
+  <link rel="stylesheet" href="css/modal.css" />
+  <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+  <title>H Living</title>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SHHZ9SNZBT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'G-SHHZ9SNZBT');
+</script>
+<!-- Google tag (gtag.js) -->
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M46RBGVH');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Meta Pixel Code -->
+<script>
+  !function (f, b, e, v, n, t, s) {
+    if (f.fbq) return; n = f.fbq = function () {
+      n.callMethod ?
+      n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+    };
+    if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+    n.queue = []; t = b.createElement(e); t.async = !0;
+    t.src = v; s = b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t, s)
+  }(window, document, 'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1653532375326705');
+  fbq('track', 'PageView');
+</script>
+<!-- End Meta Pixel Code -->
+  <style>
+    .header-content h1,
+    .header-content h2 {
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* desplazamiento-x, desplazamiento-y, blur, color */
+    }
+
+    #image-360 {
+      width: 100%;
+      height: 60vh;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #image-360 a-scene {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+  #hint360 {
+    position: fixed;
+    bottom: 25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-family: sans-serif;
+    font-size: 14px;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.8s ease;
+    white-space: nowrap;
+  }
+  #hint360.visible {
+    opacity: 1;
+  }
+
+    #hint360.fade-out {
+      opacity: 0;
+      pointer-events: none;
+    }
+    @media screen and (min-width: 769px) {
+        
+
+      #image-360 {
+        width: 100%;
+        height: 90vh;
+        position: relative;
+        overflow: hidden;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M46RBGVH"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1653532375326705&ev=PageView&noscript=1" /></noscript>
+  <header>
+    <img src="assets/fotos/header.jpg" alt="background" class="background" />
+    <div class="header-content">
+      <img data-aos="fade-right" data-aos-delay="500" src="assets/logos/hliving-white.png" alt="logo-hliving"
+        class="logo" />
+      <h1 data-aos="fade-right" data-aos-delay="500">
+        Haz realidad tu inversión ideal en Cancún
+      </h1>
+      <h2 data-aos="fade-right" data-aos-delay="500">
+        Vive donde todos quieren estar
+      </h2>
+    </div>
+  </header>
+  <section id="map">
+    <div class="background-70">
+      <div class="items-container">
+        <div class="text-container">
+          <p data-aos="fade-right" data-aos-delay="500">
+            Vive en el corazón de
+          </p>
+          <p data-aos="fade-right" data-aos-delay="500">Cancún</p>
+          <div data-aos="fade-right" data-aos-delay="500">
+            <span>desde</span><span>$3.2</span><span>MDP</span>
+          </div>
+          <div data-aos="fade-right" data-aos-delay="500">
+            <p>Tu nuevo hogar te espera en</p>
+            <p>Av. Huayacán</p>
+          </div>
+          <button id="agendar-button" class="agendar-button" data-aos="fade-right" data-aos-delay="500">
+            <p>Agenda tu cita virtual y accede a tu bono exclusivo</p>
+          </button>
+        </div>
+        <div class="map-container">
+          <div class="icons-container">
+            <img class="map-image" src="assets/fotos/map.png" alt="Mapa Cancún" />
+            <img data-aos="fade-up" data-aos-delay="500" class="pin" src="assets/logos/pin-restaurante.png"
+              alt="pin restaurante" />
+            <img data-aos="fade-up" data-aos-delay="500" id="location-pin" class="pin"
+              src="assets/logos/pin-location.svg" alt="pin location" />
+            <img data-aos="fade-up" data-aos-delay="500" class="pin" src="assets/logos/pin-auditorio.png"
+              alt="pin auditorio" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="gallery1-container" style="position: relative;">
+      <img src="assets/logos/arrow-left.png" alt="flecha izq" class="swiper-button-prev-custom">
+      <img src="assets/logos/arrow-right.png" alt="flecha der" class="swiper-button-next-custom">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="assets/fotos/g1-1.webp" alt="foto-gallery1-1">
+          </div>
+          <div class="swiper-slide"><img src="assets/fotos/g1-2.webp" alt="foto-gallery1-2">
+          </div>
+          <div class="swiper-slide"><img src="assets/fotos/g1-3.webp" alt="foto-gallery1-3">
+          </div>
+          <div class="swiper-slide"><img src="assets/fotos/g1-4.webp" alt="foto-gallery1-4">
+          </div>
+          <div class="swiper-slide"><img src="assets/fotos/g1-5.webp" alt="foto-gallery1-5">
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+
+      </div>
+      <div class="paragraph-container">
+        <p class="paragraph">
+          H Living es un desarrollo exclusivo con entrega inmediata sobre Av. Huayacán, en la zona de mayor proyección de Cancún. Una oportunidad única para vivir o invertir en un entorno moderno, accesible y con alta plusvalía.
+        </p>
+      </div>
+    </div>
+    <div class="video-container">
+      <video src="assets/fotos/CM.mp4" controls autoplay muted loop playsinline></video>
+    </div>
+  </section>
+  <div id="formModal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+  
+      <!-- Paso 1: Formulario -->
+      <div class="step step-1">
+        <h2>AGENDA UNA CITA</h2>
+        <form id="Registro-Aldea-Umm">
+          <div class="form-row">
+            <input type="text" name="firstname" placeholder="Nombre" required>
+            <input type="text" name="lastname" placeholder="Apellido" required>
+          </div>
+          <div class="form-row">
+            <div class="country-code" style="display: flex; gap: 0.5rem;">
+              <select id="countryCode" name="countryCode" required>
+                <option value="+1">US +1</option>
+                <option value="+52">MX +52</option>
+                <option value="+34">ES +34</option>
+                <option value="+44">GB +44</option>
+                <option value="+57">CO +57</option>
+                <option value="+54">AR +54</option>
+              </select>
+              <input type="tel" name="phone" placeholder="1234567890" required>
+            </div>
+            <input type="email" name="email" placeholder="Correo Electronico" required>
+          </div>
+          <button type="submit">Siguiente</button>
+        </form>
+      </div>
+  
+      <!-- Paso 2: Encuesta intro -->
+      <div class="step step-2 hidden">
+        <h2 id="surveyIntro"></h2>
+        <button id="toStep3">Siguiente</button>
+      </div>
+  
+      <!-- Paso 3: Pregunta de contacto -->
+      <div class="step step-3 hidden">
+        <h2 id="motivoQuestion"></h2>
+        <div class="answers-container">
+          <label><input type="radio" name="motivo" value="Vivirlo y disfrutarlo (uso propio)">Vivirlo y disfrutarlo (uso
+            propio)</label>
+          <label><input type="radio" name="motivo" value="Invertir y generar plusvalía o rentas (inversión)">Invertir y
+            generar plusvalía o rentas (inversión)</label>
+          <label><input type="radio" name="motivo" value="Soy asesor o broker (buscando opciones para mis clientes)">Soy
+            asesor o broker (buscando opciones para mis clientes)</label>
+        </div>
+        <div class="forms-button-container">
+          <button class="back-button" data-back-step="2">Atrás</button>
+          <button id="toStep4">Siguiente</button>
+        </div>
+      </div>
+  
+      <!-- Paso 4: Pregunta de inversión -->
+      <div class="step step-4 hidden">
+        <h2>¿Qué tan pronto te gustaría invertir en tu nuevo lote residencial?</h2>
+        <div class="answers-container">
+          <label><input type="radio" name="invertir" value="De inmediato">De inmediato</label>
+          <label><input type="radio" name="invertir" value="En los próximos meses">En los próximos meses</label>
+          <label><input type="radio" name="invertir" value="A largo plazo">A largo plazo</label>
+        </div>
+        <div class="forms-button-container">
+          <button class="back-button" data-back-step="3">Atrás</button>
+          <button id="toStep5">Siguiente</button>
+        </div>
+      </div>
+  
+      <!-- Paso 5: Pregunta de precio -->
+      <div class="step step-5 hidden">
+        <h2>¿Estás consciente de que nuestros lotes residenciales comienzan en $1,100,000 MXN?</h2>
+        <div class="answers-container">
+          <label><input type="radio" name="precio" value="Si">Sí</label>
+          <label><input type="radio" name="precio" value="No">No</label>
+        </div>
+        <div class="forms-button-container">
+          <button class="back-button" data-back-step="4">Atrás</button>
+          <button id="toStep6">Siguiente</button> <!-- Ahora va directo al calendario -->
+        </div>
+      </div>
+  
+      <!-- Paso 6: Calendario -->
+      <div class="step step-6 hidden">
+        <h2>Selecciona tu cita</h2>
+        <div id="calendarContainer"></div>
+      </div>
+  
+    </div>
+  </div>
+  <section id="apartments">
+    <div class="background-50"></div>
+    <div class="second-button-container">
+      <h2>H Living</h2>
+      <p>
+        H living fusiona diseño contemporáneo con funcionalidad y acabados regionales, ofreciendo espacios amplios, ventilación natural y distribución inteligente. Ideal para vivir o generar ingresos por renta.
+      </p>
+      <ul>
+        <li>Entrega inmediata</li>
+        <li>Certeza jurídica</li>
+        <li>Ubicación privilegiada</li>
+      </ul>
+      <button id="agendar-button2" class="agendar-button2">
+        <p>Agenda tu cita virtual y accede a tu bono exclusivo</p>
+      </button>
+    </div>
+    <div class="subtitle">
+      <h3>¡Departamentos Disponibles!</h3>
+    </div>
+    <div class="gallery2-container">
+      <div class="swiper-background"></div>
+
+      <!-- Botones afuera del .swiper -->
+      <img src="assets/logos/arrow-left.png" alt="flecha izq" class="swiper-button-prev-custom">
+      <img src="assets/logos/arrow-right.png" alt="flecha der" class="swiper-button-next-custom">
+
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="assets/fotos/g1-1.webp" alt="foto-gallery2-1">
+            <p>2 Recamaras</p>
+          </div>
+          <div class="swiper-slide"><img src="assets/fotos/g2-2.webp" alt="foto-gallery2-1">
+            <p>Techos amplios y ventilación&nbsp;cruzada</p>
+          </div>
+          <div class="swiper-slide"><img src="assets/fotos/g2-3.webp" alt="foto-gallery2-1">
+            <p>Ubicación privilegiada</p>
+          </div>
+          <div class="swiper-slide"><img src="assets/fotos/g1-1.webp" alt="foto-gallery2-1">
+            <p>2 Recamaras</p>
+          </div>
+          <div class="swiper-slide"><img src="assets/fotos/g2-2.webp" alt="foto-gallery2-1">
+            <p>Techos amplios y ventilación&nbsp;cruzada</p>
+          </div>
+          <div class="swiper-slide"><img src="assets/fotos/g2-3.webp" alt="foto-gallery2-1">
+            <p>Ubicación privilegiada</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="agendar-container"><button id="agendar-button3" class="agendar-button3">
+        <p>Agenda tu cita virtual y accede a tu bono exclusivo</p>
+      </button></div>
+    <div class="subtitle2">
+      <h3>¡Aprovecha los <b>últimos departamentos</b>!</h3>
+    </div>
+  </section>
+  <section id="plusvalia">
+    <div class="items-container">
+      <div class="item"><img src="assets/logos/icon-plus-1.png" alt="plusvalia 1">
+        <p>Departamentos con diseño amplio, techos altos y vistas panorámicas</p>
+      </div>
+      <div class="item"><img src="assets/logos/icon-plus-2.png" alt="plusvalia 2">
+        <p>Rodeado de vegetación que aporta frescura y vitalidad</p>
+      </div>
+      <div class="item"><img src="assets/logos/icon-plus-3.png" alt="plusvalia 3">
+        <p>Acabados regionales que combinan elegancia y funcionalidad</p>
+      </div>
+    </div>
+  </section>
+  <section id="amenidades">
+    <h3>Ubicación privilegiada</h3>
+    <img src="assets/fotos/texto.png" alt="">
+ 
+  </section>
+  
+  <section id="image-360">
+    <a-scene id="scene360" embedded>
+      <a-assets>
+        <img id="sky" src="assets/fotos/image-360.webp" crossorigin="anonymous" />
+      </a-assets>
+    
+      <a-entity camera look-controls position="0 1.6 0"></a-entity>
+      <a-image 
+        src="assets/pin.png" 
+        position="0.35 1 -0.19" 
+        scale="0.3 0.5 0.3"
+        rotation=" 0 -40 0"
+        look-at="[camera]">
+        
+      </a-image>
+
+      <a-sky src="#sky" rotation="0 -130 0"></a-sky>
+    </a-scene>
+    
+    <!-- Overlay de aviso -->
+    <div id="hint360">
+      🌐 Arrastra o mueve tu teléfono para explorar
+    </div>
+  </section>
+  <script src="js/main.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script>
+    const scene = document.getElementById("scene360");
+    const hint = document.getElementById("hint360");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          hint.classList.add("visible");
+          setTimeout(() => {
+            hint.classList.remove("visible");
+          }, 3000); // visible por 3s
+        }
+      });
+    }, { threshold: 0.5 }); // 50% visible para activarlo
+
+    observer.observe(scene);
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.gallery1-container .swiper', {
+      loop: true,
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next-custom',
+        prevEl: '.swiper-button-prev-custom',
+      },
+
+      breakpoints: {
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+          pagination: {
+            el: '',
+            clickable: true,
+          }
+        }
+      }
+    });
+    const swiper2 = new Swiper('.gallery2-container .swiper', {
+      loop: true,
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      navigation: {
+        nextEl: '.swiper-button-next-custom',
+        prevEl: '.swiper-button-prev-custom',
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+
+        }
+      }
+    });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+body, html{
+    padding: 0;
+    margin: 0;
+    font-family: 'raleway', sans-serif;
+    overflow-x: hidden;
+}
+:root{
+  --primary-color: #000000;
+  --secondary-color: #ef2782;
+}
+@font-face {
+  font-family: 'raleway';
+  src: url('/assets/fonts/Raleway-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'raleway-bold';
+  src: url('/assets/fonts/Raleway-ExtraBold.ttf') format('truetype');
+  font-weight: bolder;
+  font-style: normal;
+}
+@media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 769px) and (min-height: 721px) {
+}
