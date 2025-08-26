@@ -347,11 +347,39 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </div>
     </div>
   </section>
+  <section id="apartments2">
+    <div class="gallery3-container">
+      <div class="swiper-background"></div>
+
+      <!-- Botones afuera del .swiper -->
+      <img src="assets/logos/arrow-left.png" alt="flecha izq" class="swiper-button-prev-3" style="animation: bounce 2s infinite;">
+      <img src="assets/logos/arrow-right.png" alt="flecha der" class="swiper-button-next-3" style="animation: bounce 2s infinite;">
+
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="assets/fotos/g3-1.webp" alt="foto-gallery2-1">
+            <p>Recamara principal</p>
+          </div>
+          <div class="swiper-slide"><img src="assets/fotos/g3-2.webp" alt="foto-gallery2-1">
+            <p>Sala</p>
+          </div>
+          <div class="swiper-slide"><img src="assets/fotos/g3-3.webp" alt="foto-gallery2-1">
+            <p>Baño recamara principal</p>
+          </div>
+          <div class="swiper-slide"><img src="assets/fotos/g3-4.webp" alt="foto-gallery2-1">
+            <p>Cocina</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </section>
   <section id="amenidades">
     <h3>Ubicación privilegiada</h3>
     <img src="assets/fotos/texto.png" alt="">
- <!-- <p><span>A menos de </span><span>150 Mts.</span><span>de todo lo que necesitas</span></p> -->
+    <!-- <p><span>A menos de </span><span>150 Mts.</span><span>de todo lo que necesitas</span></p> -->
   </section>
+
   
   <section id="image-360">
     <a-scene id="scene360" embedded>
@@ -433,6 +461,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       navigation: {
         nextEl: '.swiper-button-next-custom',
         prevEl: '.swiper-button-prev-custom',
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+
+        }
+      }
+    });
+    const swiper3 = new Swiper('.gallery3-container .swiper', {
+      loop: true,
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      navigation: {
+        nextEl: '.swiper-button-next-3',
+        prevEl: '.swiper-button-prev-3',
       },
       breakpoints: {
         768: {

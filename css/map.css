@@ -146,7 +146,7 @@
 #location-pin {
   animation: bounce 2s infinite;
 }
-.swiper-button-prev-custom, .swiper-button-next-custom {
+.swiper-button-prev-custom, .swiper-button-next-custom, .swiper-button-prev-3, .swiper-button-next-3 {
   animation: bounce 2s infinite;
 }
 .text-container button {

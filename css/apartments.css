@@ -57,7 +57,8 @@
     text-align: center;
 }
 
-.gallery2-container {
+.gallery2-container,
+.gallery3-container {
     position: relative;
     display: flex;
 }
@@ -99,7 +100,9 @@
 
 /* Flechas fuera del .swiper y más cerca de los bordes */
 .swiper-button-prev-custom,
-.swiper-button-next-custom {
+.swiper-button-next-custom,
+.swiper-button-prev-3,
+.swiper-button-next-3 {
     position: absolute;
     top: 45%;
     transform: translateY(-50%);
@@ -108,12 +111,14 @@
     cursor: pointer;
 }
 
-.swiper-button-prev-custom {
+.swiper-button-prev-custom,
+.swiper-button-prev-3 {
     left: 0.5rem;
     /* separadas del borde izquierdo */
 }
 
-.swiper-button-next-custom {
+.swiper-button-next-custom,
+.swiper-button-next-3 {
     right: 0.5rem;
     /* separadas del borde derecho */
 }
@@ -168,7 +173,9 @@
 }
     /* Flechas fuera del .swiper y más cerca de los bordes */
 .gallery2-container .swiper-button-prev-custom,
-.gallery2-container .swiper-button-next-custom {
+.gallery2-container .swiper-button-next-custom, 
+.gallery3-container .swiper-button-next-3,
+.gallery3-container .swiper-button-prev-3 {
     position: absolute;
     top: 45%;
     transform: translateY(-50%);
@@ -177,12 +184,14 @@
     cursor: pointer;
 }
 
-.swiper-button-prev-custom {
+.swiper-button-prev-custom,
+.swiper-button-prev-3 {
     left: 2rem;
     /* separadas del borde izquierdo */
 }
 
-.swiper-button-next-custom {
+.swiper-button-next-custom,
+.swiper-button-next-3 {
     right: 2rem;
     /* separadas del borde derecho */
 }
@@ -259,15 +268,19 @@
     }
 
     .swiper-button-prev-custom,
-    .swiper-button-next-custom {
+    .swiper-button-next-custom,
+    .swiper-button-prev-3,
+    .swiper-button-next-3 {
         height: 7rem;
     }
 
-    .swiper-button-prev-custom {
+    .swiper-button-prev-custom,
+    .swiper-button-prev-3 {
         left: 3rem;
     }
 
-    .swiper-button-next-custom {
+    .swiper-button-next-custom,
+    .swiper-button-next-3 {
         right: 3rem;
     }
 
