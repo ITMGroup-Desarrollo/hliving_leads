@@ -329,7 +329,7 @@ width: 50%;
 
 @media screen and (min-width: 769px) and (min-height: 721px) {
     #map {
-  height: 260vh;
+  height: 268vh;
 }
   .text-container button {
     padding: 0 3rem;
@@ -403,8 +403,8 @@ width: 50%;
     width: 24rem;
   }
   .paragraph {
-    font-size: 2.5rem;
-    width: 80%;
+    font-size: 2rem;
+    width: 90%;
     text-align: center;
   }
 }
